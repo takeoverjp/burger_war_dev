@@ -68,7 +68,13 @@ RUN apt-get update ;\
     apt install -y ros-melodic-aruco-ros; \
     apt install -y python-pil python-pil.imagetk;
 
+# ai lib
+#ADD  install_ai_lib.sh  /
+#RUN  chmod +x /install_ai_lib.sh
+#RUN  /install_ai_lib.sh
+
 # command
 ADD  start.sh  /
 RUN  chmod +x /start.sh
 RUN  /start.sh
+
