@@ -22,8 +22,6 @@ sudo apt-get install -y docker-ce docker.io
 
 ## step2. コンテナ起動
 
-作成中
-
 ```
 sudo docker run -p 6081:80 --shm-size=512m seigott/burger_war_docker
 ```
@@ -45,11 +43,6 @@ Terminalを2つ用意してそれぞれで以下を実行
 ```
 cd ~/catkin_make/src/burger_war_kit
 bash scripts/sim_with_judge.sh
-```
-
-```
-cd ~/catkin_ws/src/burger_war_kit
-bash scripts/start.sh
 ```
 
 ```
