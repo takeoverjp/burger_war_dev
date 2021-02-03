@@ -43,13 +43,25 @@ localhost:6081
 Terminalを2つ用意してそれぞれで以下を実行
 
 ```
-cd ~/catkin_make/src/burger_war
+cd ~/catkin_make/src/burger_war_kit
 bash scripts/sim_with_judge.sh
 ```
 
 ```
-cd ~/catkin_make/src/burger_war
+cd ~/catkin_ws/src/burger_war_kit
 bash scripts/start.sh
+```
+
+```
+cd ~/catkin_ws/src/burger_war_kit
+bash scripts/start.sh
+```
+
+`autotest`を実行する場合
+
+```
+cd ~/catkin_ws/src/burger_war_kit
+bash autotest/autotest.sh
 ```
 
 ---
@@ -61,7 +73,20 @@ bash scripts/start.sh
 xxx is container version
 
 ```
+# build
 docker build -t burger_war_docker:xxx .
+
+# 必要に応じてtag付けする
+docker tag burger_war_docker:xxx seigott/burger_war_docker
+```
+
+## docker login/push/logout
+
+```
+### seigott/burger_war_dockerをpushする場合
+docker login
+docker push seigott/burger_war_docker
+docker logout
 ```
 
 ## docker compose
