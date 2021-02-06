@@ -15,7 +15,7 @@
 
   <!-- Map server -->
   <node pkg="map_server" name="map_server" type="map_server" args="$(arg map_file)">
-    <param name="frame_id"  value="$(arg robot_namespace)/map"/>
+    <param name="frame_id"  value="$(arg robot_namespace)map"/>
   </node>
 
   <!-- AMCL -->
@@ -54,9 +54,9 @@
     <param name="odom_alpha2"               value="0.1"/>
     <param name="odom_alpha3"               value="0.1"/>
     <param name="odom_alpha4"               value="0.1"/>
-    <param name="odom_frame_id"             value="$(arg robot_namespace)/odom"/>
-    <param name="base_frame_id"             value="$(arg robot_namespace)/base_footprint"/>
-    <param name="global_frame_id"           value="$(arg robot_namespace)/map"/>
+    <param name="odom_frame_id"             value="$(arg robot_namespace)odom"/>
+    <param name="base_frame_id"             value="$(arg robot_namespace)base_footprint"/>
+    <param name="global_frame_id"           value="$(arg robot_namespace)map"/>
   </node>
 
   <!-- move_base -->
@@ -76,12 +76,12 @@
     <remap from="odom" to="$(arg odom_topic)"/>
     <param name="DWAPlannerROS/min_vel_x" value="0.0" if="$(arg move_forward_only)" />
 
-    <param name="local_costmap/global_frame"             value="$(arg robot_namespace)/odom"/>
-    <param name="local_costmap/robot_base_frame"             value="$(arg robot_namespace)/base_link"/>
-    <param name="local_costmap/scan/sensor_frame"             value="$(arg robot_namespace)/base_scan"/>
-    <param name="global_costmap/robot_base_frame"            value="$(arg robot_namespace)/base_link"/>
-    <param name="global_costmap/global_frame"            value="$(arg robot_namespace)/map"/>
-    <param name="global_costmap/scan/sensor_frame"             value="$(arg robot_namespace)/base_scan"/>
+    <param name="local_costmap/global_frame"             value="$(arg robot_namespace)odom"/>
+    <param name="local_costmap/robot_base_frame"             value="$(arg robot_namespace)base_link"/>
+    <param name="local_costmap/scan/sensor_frame"             value="$(arg robot_namespace)base_scan"/>
+    <param name="global_costmap/robot_base_frame"            value="$(arg robot_namespace)base_link"/>
+    <param name="global_costmap/global_frame"            value="$(arg robot_namespace)map"/>
+    <param name="global_costmap/scan/sensor_frame"             value="$(arg robot_namespace)base_scan"/>
   </node>
 
   <!-- rviz -->
