@@ -87,3 +87,12 @@ docker logout
 ```
 docker-compose up -d
 ```
+
+## docker内でコマンドを実行する
+
+`man docker-exec`参照。
+
+`source helper.sh`で`de`をaliasを定義できる。
+
+* `de` : docker内でbash起動
+* `de 任意のコマンド` : docker内でコマンドを実行
