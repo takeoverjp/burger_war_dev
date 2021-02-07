@@ -92,7 +92,7 @@ docker-compose up -d
 
 `man docker-exec`参照。
 
-`source helper.sh`で`de`をaliasを定義できる。
+`source helper.sh`で`de`というaliasを定義できる。
 
 * `de` : docker内でbash起動
 * `de 任意のコマンド` : docker内でコマンドを実行
