@@ -17,6 +17,10 @@ function install_package(){
     sudo -E apt-get install -y ros-melodic-dwa-local-planner
     sudo -E apt-get install -y ros-melodic-global-planner
     sudo -E apt install -y libarmadillo-dev libarmadillo8  # necessary to install obstacle_detector
+
+    # debug
+    sudo -E apt-get install -y recordmydesktop gtk-recordmydesktop
+    sudo -E apt-get install -y ffmpeg
    
     # other repository --->
     #sudo -E apt-get install -y ros-melodic-dwa-local-planner
