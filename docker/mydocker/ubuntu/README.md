@@ -41,7 +41,7 @@ localhost:6081
 Terminalを2つ用意してそれぞれで以下を実行
 
 ```
-cd ~/catkin_make/src/burger_war_kit
+cd ~/catkin_ws/src/burger_war_kit
 bash scripts/sim_with_judge.sh
 ```
 
