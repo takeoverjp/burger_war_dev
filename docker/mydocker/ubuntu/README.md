@@ -41,7 +41,7 @@ localhost:6081
 Terminalを2つ用意してそれぞれで以下を実行
 
 ```
-cd ~/catkin_make/src/burger_war_kit
+cd ~/catkin_ws/src/burger_war_kit
 bash scripts/sim_with_judge.sh
 ```
 
@@ -87,3 +87,12 @@ docker logout
 ```
 docker-compose up -d
 ```
+
+## docker内でコマンドを実行する
+
+`man docker-exec`参照。
+
+`source helper.sh`で`de`というaliasを定義できる。
+
+* `de` : docker内でbash起動
+* `de 任意のコマンド` : docker内でコマンドを実行
