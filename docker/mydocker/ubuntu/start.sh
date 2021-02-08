@@ -14,29 +14,29 @@ function install_package(){
     pip install requests flask
 
     # my repository
-    sudo -E apt-get install ros-melodic-dwa-local-planner
-    sudo -E apt-get install ros-melodic-global-planner
+    sudo -E apt-get install -y ros-melodic-dwa-local-planner
+    sudo -E apt-get install -y ros-melodic-global-planner
     sudo -E apt install -y libarmadillo-dev libarmadillo8  # necessary to install obstacle_detector
-
+   
     # other repository --->
-    sudo -E apt-get install ros-melodic-dwa-local-planner
-    sudo -E apt-get install ros-melodic-slam-gmapping
-    pip install transitions
-    sudo -E apt-get install graphviz graphviz-dev
-    pip install graphviz
-    sudo -E apt install ros-melodic-executive-smach
-    sudo -E apt-get install --no-install-recommends -y libarmadillo-dev libarmadillo8
+    #sudo -E apt-get install -y ros-melodic-dwa-local-planner
+    #sudo -E apt-get install -y ros-melodic-slam-gmapping
+    #pip install transitions
+    #sudo -E apt-get install -y graphviz graphviz-dev
+    #pip install graphviz
+    #sudo -E apt install -y ros-melodic-executive-smach
+    #sudo -E apt-get install --no-install-recommends -y libarmadillo-dev libarmadillo8
 
     ###
-    sudo -E apt install -y ros-melodic-jsk-rviz-plugins
-    sudo -E apt install -y ros-melodic-smach*
+    #sudo -E apt install -y ros-melodic-jsk-rviz-plugins
+    #sudo -E apt install -y ros-melodic-smach*
 
     ###
-    sudo -E apt install -y ros-melodic-libg2o
-    sudo -E apt install -y libopencv-dev
-    sudo -E apt install -y ros-melodic-costmap-converter
-    sudo -E apt install -y libsuitesparse-dev
-    sudo -E apt install -y libarmadillo-dev libarmadillo8
+    #sudo -E apt install -y ros-melodic-libg2o
+    #sudo -E apt install -y libopencv-dev
+    #sudo -E apt install -y ros-melodic-costmap-converter
+    #sudo -E apt install -y libsuitesparse-dev
+    #sudo -E apt install -y libarmadillo-dev libarmadillo8
     ### --->
 }
 install_package
