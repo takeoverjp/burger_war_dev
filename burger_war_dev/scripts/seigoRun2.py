@@ -56,7 +56,7 @@ class SeigoBot2:
 
         def load_waypoint():
             path = os.environ['HOME'] + \
-                '/catkin_ws/src/burger_war/burger_war/scripts/waypoints.csv'
+                '/catkin_ws/src/burger_war_dev/burger_war_dev/scripts/waypoints.csv'
             return Waypoints(path, self.my_side)
 
         self.listener = tf.TransformListener()
@@ -175,8 +175,8 @@ class SeigoBot2:
             if self.detect_counter < self.counter_th:
                 return False, 0.0, 0.0
 
-        map_topic = self.robot_namespace+"/map"
-        baselink_topic = self.robot_namespace+"/base_link"
+        map_topic = self.robot_namespace+"map"
+        baselink_topic = self.robot_namespace+"base_link"
         trans, rot,  vaild = self.get_position_from_tf(
             map_topic, baselink_topic)
         if vaild == False:
@@ -373,7 +373,7 @@ class SeigoBot2:
     def send_goal(self, point):
         print self.clear_costmap.call()
         goal = MoveBaseGoal()
-        goal.target_pose.header.frame_id = self.robot_namespace+"/map"
+        goal.target_pose.header.frame_id = self.robot_namespace+"map"
         goal.target_pose.pose.position.x = point[0]
         goal.target_pose.pose.position.y = point[1]
 
