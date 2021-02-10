@@ -1,4 +1,4 @@
-#error build error trial
+
 #include <angles/angles.h>
 #include <following_planner/following_planner.h>
 #include <geometry_msgs/Quaternion.h>
