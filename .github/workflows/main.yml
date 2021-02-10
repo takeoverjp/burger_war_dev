@@ -22,18 +22,12 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-
-      # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: echo Hello, world!
-
-      # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
-        run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
-
-      - name: ROS 2 CI Action
-        uses: ros-tooling/action-ros-ci@0.1.1
+      - uses: ros-tooling/setup-ros@v0.1
+        with:
+          required-ros-distributions: melodic
+      - uses: ros-tooling/action-ros-ci@v0.1.1
+        with:
+          package-name: my_package
+          target-ros1-distro: melodic
+          vcs-repo-file-url: ""
