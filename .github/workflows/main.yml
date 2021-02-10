@@ -21,3 +21,8 @@ jobs:
           package-name: burger_navigation
           target-ros1-distro: melodic
           vcs-repo-file-url: ""
+      - uses: ros-tooling/action-ros-ci@v0.1
+        with:
+          package-name: following_planner
+          target-ros1-distro: melodic
+          vcs-repo-file-url: ""
