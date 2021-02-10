@@ -28,6 +28,6 @@ jobs:
           required-ros-distributions: melodic
       - uses: ros-tooling/action-ros-ci@v0.1
         with:
-          package-name: my_package
+          package-name: burger_navigation
           target-ros1-distro: melodic
           vcs-repo-file-url: ""
