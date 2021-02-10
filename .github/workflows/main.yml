@@ -1,0 +1,23 @@
+name: CI
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  ros-build:
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@v2
+      - uses: ros-tooling/setup-ros@v0.1
+        with:
+          required-ros-distributions: melodic
+      - uses: ros-tooling/action-ros-ci@v0.1
+        with:
+          package-name: burger_navigation
+          target-ros1-distro: melodic
+          vcs-repo-file-url: ""
