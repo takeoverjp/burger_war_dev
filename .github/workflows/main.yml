@@ -12,12 +12,21 @@ jobs:
   ros-build:
     runs-on: ubuntu-18.04
     steps:
-      - uses: actions/checkout@v2
-      - uses: ros-tooling/setup-ros@v0.1
+      - name: checkout
+        uses: actions/checkout@v2
+      - name: ros setup
+        uses: ros-tooling/setup-ros@v0.1
         with:
           required-ros-distributions: melodic
-      - uses: ros-tooling/action-ros-ci@v0.1
+      - name: burger_navigation
+        uses: ros-tooling/action-ros-ci@v0.1
         with:
           package-name: burger_navigation
+          target-ros1-distro: melodic
+          vcs-repo-file-url: ""
+      - name: following_planner
+        uses: ros-tooling/action-ros-ci@v0.1
+        with:
+          package-name: following_planner
           target-ros1-distro: melodic
           vcs-repo-file-url: ""
